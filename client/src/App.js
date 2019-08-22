@@ -10,6 +10,7 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Meal Advisor</h2>
+          {console.log("new branch test commit")}
         </div>
       </div>
     );

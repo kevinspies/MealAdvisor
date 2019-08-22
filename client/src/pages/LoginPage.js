@@ -6,6 +6,21 @@ class LoginPage extends Component {
     password: ""
   };
 
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.username && this.state.password) {
+      //   API.loginUser
+      //if they already exists, createNewUser
+    }
+  };
+
   render() {
     return (
       <div>

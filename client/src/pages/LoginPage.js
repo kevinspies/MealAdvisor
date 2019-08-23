@@ -7,6 +7,12 @@ class LoginPage extends Component {
     password: ""
   };
 
+  // login = (id) => {
+  //   API.getUser(id)
+  //   .then(res =>
+  //     this.setState), set the app's state?
+  // }
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -17,7 +23,15 @@ class LoginPage extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     if (this.state.username && this.state.password) {
-      //   API.loginUser
+      API.createUser({
+        username: this.state.username,
+        password: this.state.password
+      });
+      // .then(res=>)
+      //in this promise, i want to render the home page
+      //so this class needs a function to do that
+      //am i to use inheritance here to call
+      //something in app?
       //if they already exists, createNewUser
     }
   };

@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 import Nav from "../components/Nav";
+import { Input, TextArea, FormBtn } from "../components/Form";
+import { List, ListItem } from "../components/List";
+import { Link } from "react-router-dom";
 
 class HomePage extends Component {
   state = {

@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
+import HomePage from "./pages/HomePage";
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
             {console.log("new branch test commit")}
           </div>
           <Route exact path="/" component={LoginPage} />
+          <Route exact path="/users/:id" component={HomePage} />
         </div>
       </Router>
     );

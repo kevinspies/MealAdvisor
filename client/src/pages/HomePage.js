@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Col, Row, Container } from "../components/Grid";
+import Jumbotron from "../components/Jumbotron";
 
 class HomePage extends Component {
   state = {
@@ -10,7 +12,18 @@ class HomePage extends Component {
   };
 
   render() {
-    return <h1>Welcome!</h1>;
+    return (
+      //la la la
+      <Container fluid>
+        <Row>
+          <Jumbotron>You Got This!</Jumbotron>
+        </Row>
+        <Row>
+          <Col size="md-6 md-offset-1">Your Brunch:</Col>
+          <Col size="md-6 md-offset-1">Your Dinner:</Col>
+        </Row>
+      </Container>
+    );
   }
 }
 

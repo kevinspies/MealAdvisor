@@ -4,6 +4,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
+import Nav from "./components/Nav";
 
 class App extends Component {
   render() {
@@ -15,8 +16,11 @@ class App extends Component {
             <h2>Meal Advisor</h2>
             {console.log("new branch test commit")}
           </div>
-          <Route exact path="/" component={LoginPage} />
-          <Route exact path="/users/:id" component={HomePage} />
+          <Nav />
+          <Switch>
+            <Route exact path="/" component={LoginPage} />
+            <Route exact path="/users/:id" component={HomePage} />
+          </Switch>
         </div>
       </Router>
     );

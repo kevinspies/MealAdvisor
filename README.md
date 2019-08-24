@@ -1,5 +1,9 @@
 # Create React Express App
 
+# Kevin's Daily Health App
+
+I'm making this app because it is something that would be very valuable to me. I Like just a couple restaurants, bibibop and cava namely. I like to watch my calories and stay healthy. I also don't like to order the same thing every time I eat. So in essence this app aims, as a starter goal, to give me semi random orders at these locations. It intends to be full MERN stack, saving and authenticating users through a Mongo Database, recieving requests through express, react as a responsive front end, and node.js.
+
 ## About This Boilerplate
 
 This setup allows for a Node/Express/React app which can be easily deployed to Heroku.

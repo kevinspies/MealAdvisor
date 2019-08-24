@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import Nav from "../components/Nav";
 
 class LoginPage extends Component {
   state = {
@@ -45,6 +46,7 @@ class LoginPage extends Component {
     return (
       <Container fluid>
         <div>
+          <Nav />
           <form>
             <label>
               Username:

@@ -15,5 +15,12 @@ class EditPage extends Component {
   updateStats = id => {
     //update body stats
   };
+
+  render() {
+    return (
+      //la la la
+      <h1>edit your body's stats!</h1>
+    );
+  }
 }
 export default EditPage;

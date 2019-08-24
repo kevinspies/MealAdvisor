@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
+import Nav from "../components/Nav";
 
 class HomePage extends Component {
   state = {
@@ -15,6 +16,7 @@ class HomePage extends Component {
     return (
       //la la la
       <Container fluid>
+        <Nav />
         <Row>
           <Jumbotron>You Got This!</Jumbotron>
         </Row>

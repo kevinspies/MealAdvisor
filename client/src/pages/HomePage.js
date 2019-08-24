@@ -1,7 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 
-function Welcome() {
-  return <h1>Hello, there</h1>;
+class HomePage extends Component {
+  state = {
+    //blah
+  };
+
+  loadUser = id => {
+    //load users name, weight
+  };
+
+  render() {
+    return <h1>Welcome!</h1>;
+  }
 }
 
-export default Welcome;
+export default HomePage;

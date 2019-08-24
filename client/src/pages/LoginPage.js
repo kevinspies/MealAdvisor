@@ -56,7 +56,9 @@ class LoginPage extends Component {
               <input type="text" name="name" />
             </label>
 
-            <input type="submit" value="Submit" />
+            <Link to={"/users/"}>
+              <input type="submit" value="Submit" />
+            </Link>
           </form>
         </div>
       </Container>

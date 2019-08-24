@@ -11,5 +11,9 @@ class EditPage extends Component {
     sex: "",
     weight: ""
   };
+
+  updateStats = id => {
+    //update body stats
+  };
 }
 export default EditPage;

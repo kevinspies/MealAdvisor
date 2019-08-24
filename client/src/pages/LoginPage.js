@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import Jumbotron from "../components/Jumbotron";
+import { Link } from "react-router-dom";
+import { Col, Row, Container } from "../components/Grid";
+import { List, ListItem } from "../components/List";
+import { Input, TextArea, FormBtn } from "../components/Form";
 
 class LoginPage extends Component {
   state = {
@@ -10,7 +15,7 @@ class LoginPage extends Component {
   // login = (id) => {
   //   API.getUser(id)
   //   .then(res =>
-  //     this.setState), set the app's state?
+  //
   // }
 
   handleInputChange = event => {
@@ -38,21 +43,23 @@ class LoginPage extends Component {
 
   render() {
     return (
-      <div>
-        <form>
-          <label>
-            Username:
-            <input type="text" name="name" />
-          </label>
+      <Container fluid>
+        <div>
+          <form>
+            <label>
+              Username:
+              <input type="text" name="name" />
+            </label>
 
-          <label>
-            Password:
-            <input type="text" name="name" />
-          </label>
+            <label>
+              Password:
+              <input type="text" name="name" />
+            </label>
 
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </Container>
     );
   }
 }

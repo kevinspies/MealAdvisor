@@ -27,8 +27,11 @@ const bibiMenu = {
 // function generateMeal(caloriesRemaining, menuObject) {
 function generateMeal() {
   //pick a random base
-  let randBase = Math.floor(Math.random() * 2) + 1;
+  let newMeal = {};
+  let randBase = Math.floor(Math.random() * 2); //returns 0 or 1, perfect for index's of an array of length 2!
   console.log(randBase);
+  newMeal.base = bibiMenu.base[randBase];
+  console.log(newMeal);
 }
 
 generateMeal();

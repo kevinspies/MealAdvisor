@@ -1,6 +1,6 @@
 const bibiMenu = {
-  base: [{ purpleRice: 280 }, { japchaeNoodles: 213 }],
-  protein: [{ spicyChicken: 169 }, { sweetChicken: 171 }, { Beef: 180 }],
+  bases: [{ purpleRice: 280 }, { japchaeNoodles: 213 }],
+  proteins: [{ spicyChicken: 169 }, { sweetChicken: 171 }, { Beef: 180 }],
   hotToppings: [{ beanSprouts: 45 }, { blackBeans: 35 }, { potatoes: 60 }],
   coldToppings: [
     { carrots: 15 },
@@ -13,7 +13,7 @@ const bibiMenu = {
     { pickledRedCabbage: 15 },
     { redCabbage: 9 }
   ],
-  sauce: [
+  sauces: [
     { yumYum: 140 },
     { teriaki: 32 },
     { gochujang: 70 },
@@ -26,15 +26,21 @@ const bibiMenu = {
 
 var order = [];
 var currentCalories = 0;
-var randBase = Math.floor(Math.random() * 2); //2 bases
-var randProtein = Math.floor(Math.random() * 3); //3 proteins
-var randHotTopping = Math.floor(Math.random() * 3); //3 hot toppings
-var randColdTopping = Math.floor(Math.random() * 9); //9 cold toppings etc
-var randSauce = Math.floor(Math.random() * 6);
-var randSides = Math.floor(Math.random() * 2);
 
 function addBase() {
-  order.push(bibiMenu.base[Math.floor(Math.random() * 2)]);
+  order.push(bibiMenu.bases[Math.floor(Math.random() * bibiMenu.bases.length)]);
+}
+function addProtein() {
+  order.push(
+    bibiMenu.proteins[Math.floor(Math.random() * bibiMenu.proteins.length)]
+  );
+}
+function addhotTopping() {
+  order.push(
+    bibiMenu.hotToppings[
+      Math.floor(Math.random() * bibiMenu.hotToppings.length)
+    ]
+  );
 }
 
 addBase();

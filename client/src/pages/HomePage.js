@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
-import Nav from "../components/Nav";
+import NavTwo from "../components/NavTwo";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import { List, ListItem } from "../components/List";
 import { Link } from "react-router-dom";
@@ -19,7 +19,7 @@ class HomePage extends Component {
     return (
       //la la la
       <Container fluid>
-        <Nav />
+        <NavTwo />
         <Row>
           <Jumbotron>You Got This!</Jumbotron>
         </Row>

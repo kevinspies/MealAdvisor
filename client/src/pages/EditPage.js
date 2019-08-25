@@ -19,8 +19,16 @@ class EditPage extends Component {
 
   render() {
     return (
-      //la la la
-      <h1>edit your body's stats!</h1>
+      <div>
+        //la la la
+        <h1>edit your body's stats!</h1>
+        <Input value={this.state.name} placeholder="name (required)" />
+        <Input value={this.state.age} placeholder="age (required)" />
+        <Input value={this.state.height} placeholder="height (required)" />
+        <Input value={this.state.sex} placeholder="sex (required)" />
+        <Input value={this.state.weight} placeholder="weight (required)" />
+        <FormBtn>Save Body Stats</FormBtn>
+      </div>
     );
   }
 }

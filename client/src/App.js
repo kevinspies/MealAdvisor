@@ -4,6 +4,7 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
+import EditPage from "./pages/EditPage";
 import Nav from "./components/Nav";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={LoginPage} />
           <Route exact path="/users/" component={HomePage} />
+          <Route exact path="/edit/" component={EditPage} />
         </Switch>
       </div>
     </Router>

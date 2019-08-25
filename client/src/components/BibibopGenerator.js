@@ -24,14 +24,35 @@ const bibiMenu = {
   sides: [{ kimchi: 30 }, { misoSoup: 35 }]
 };
 
-// function generateMeal(caloriesRemaining, menuObject) {
+const remainingCalories = 1000;
+
 function generateMeal() {
-  //pick a random base
-  let newMeal = {};
-  let randBase = Math.floor(Math.random() * 2); //returns 0 or 1, perfect for index's of an array of length 2!
-  console.log(randBase);
-  newMeal.base = bibiMenu.base[randBase];
-  console.log(newMeal);
+  var order = {};
+  var currentCalories = 0;
+  //start with a base
+  var randBase = Math.floor(Math.random() * 2); //returns 0 or 1, perfect for index's of an array of length 2!
+  order.base = bibiMenu.base[randBase];
+  console.log(order);
+  console.log(currentCalories);
+  console.log(remainingCalories);
+  currentCalories += order.base[randBase];
+  console.log("current calories: " + currentCalories);
+  console.log("type of currentCalories: " + typeof currentCalories);
+  console.log("type of random index in order: " + typeof order.base[0]); //undefined
+  if (currentCalories < remainingCalories) {
+    //continue with a protein
+    var randProtein = Math.floor(Math.random() * 3); //3 proteins
+    order.protein = bibiMenu.protein[randProtein];
+    console.log(order);
+    if (currentCalories < remainingCalories) {
+      //continue with a hotTopping
+      var randHotTopping = Math.floor(Math.random() * 3); //3 hot toppings
+      order.hotToppings = bibiMenu.hotToppings[randHotTopping];
+      console.log(order);
+    } else return order;
+  } else return order;
+  return order;
+  //check - if calories of order < remainingCalories
 }
 
 generateMeal();

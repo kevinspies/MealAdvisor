@@ -1,6 +1,6 @@
-const menu = {
-  base: [purpleRice, japchaeNoodles],
-  protein: [spicyChicken, sweetChicken, Beef],
+const bibiMenu = {
+  base: [{ purpleRice: 280 }, { japchaeNoodles: 213 }],
+  protein: [{ spicyChicken: 169 }, { sweetChicken: 171 }, { Beef: 180 }],
   hotToppings: [beanSprouts, blackBeans, potatoes],
   coldToppings: [
     carrots,
@@ -24,4 +24,4 @@ const menu = {
   sides: [kimchi, misoSoup]
 };
 
-function generateBibiMeal(caloriesRemaining, bibiMenuObject) {}
+function generateMeal(caloriesRemaining, menuObject) {}

@@ -35,21 +35,41 @@ function addProtein() {
     bibiMenu.proteins[Math.floor(Math.random() * bibiMenu.proteins.length)]
   );
 }
-function addhotTopping() {
+function addHotTopping() {
   order.push(
     bibiMenu.hotToppings[
       Math.floor(Math.random() * bibiMenu.hotToppings.length)
     ]
   );
 }
+function addColdTopping() {
+  order.push(
+    bibiMenu.coldToppings[
+      Math.floor(Math.random() * bibiMenu.coldToppings.length)
+    ]
+  );
+}
+function addSauce() {
+  order.push(
+    bibiMenu.sauces[Math.floor(Math.random() * bibiMenu.sauces.length)]
+  );
+}
+function addSide() {
+  order.push(bibiMenu.sides[Math.floor(Math.random() * bibiMenu.sides.length)]);
+}
+
+function assessMeal() {
+  for (var i = 0; i < order.length; i++) {
+    currentCalories += parseInt(Object.values(order[i]));
+  }
+  return currentCalories;
+}
 
 addBase();
 addProtein();
-addhotTopping();
+addHotTopping();
+addColdTopping();
+addSauce();
+addSide();
 console.log(order);
-console.log(typeof order);
-// console.log(Object.values(order));
-for (var i = 0; i < order.length; i++) {
-  currentCalories += parseInt(Object.values(order[i]));
-}
-console.log(currentCalories);
+console.log(assessMeal());

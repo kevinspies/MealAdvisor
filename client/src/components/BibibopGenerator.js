@@ -44,6 +44,12 @@ function addhotTopping() {
 }
 
 addBase();
-addBase();
-addBase();
+addProtein();
+addhotTopping();
 console.log(order);
+console.log(typeof order);
+// console.log(Object.values(order));
+for (var i = 0; i < order.length; i++) {
+  currentCalories += parseInt(Object.values(order[i]));
+}
+console.log(currentCalories);

@@ -1,10 +1,12 @@
 import React from "react";
-import Nav from "../components/Nav";
+import Nav from "../components/NavAbout";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
     <div>
       <Nav />
+
       <h3>
         This is an app I made to health my daily routine and to stay healthy. It
         assumes a moderate to active lifestyle, calculates your BMI behind the

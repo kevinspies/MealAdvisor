@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../../logo.svg";
+// import logo from "../../logo.svg";
+import logo from "../../leafLogo.png";
 
 function Nav() {
   return (
@@ -8,7 +9,7 @@ function Nav() {
         Meal Advisor
       </a>
 
-      <img src={logo} className="App-logo" alt="logo" />
+      {/* <img src={logo} className="App-logo" alt="logo" /> */}
     </nav>
   );
 }

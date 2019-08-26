@@ -6,6 +6,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import Nav from "../components/Nav";
+import "./style.css";
 
 class LoginPage extends Component {
   state = {
@@ -45,24 +46,41 @@ class LoginPage extends Component {
   render() {
     return (
       <Container fluid>
-        <div>
-          <Nav />
-          <form>
-            <label>
-              Username:
-              <input type="text" name="name" />
-            </label>
+        <Nav />
+        {/* <form>
+          <label>
+            Username:
+            <input type="text" name="name" />
+          </label>
 
-            <label>
-              Password:
-              <input type="text" name="name" />
-            </label>
-
+          <label>
+            Password:
+            <input type="text" name="name" />
+          </label> */}
+        <Row className="myForm">
+          <Col size="md-6" className="myForm">
+            <Input
+              value={this.state.username}
+              onChange={this.handleInputChange}
+              name="username"
+              placeholder="Username (required)"
+            />
+            <Input
+              value={this.state.password}
+              onChange={this.handleInputChange}
+              name="password"
+              placeholder="Password (required)"
+            />
             <Link to={"/users/"}>
               <input type="submit" value="Submit" />
             </Link>
-          </form>
-        </div>
+          </Col>
+          <Col size="md-2">
+            <Link to="/about/" className="padding: 50px bg-color:blue">
+              About this App
+            </Link>
+          </Col>
+        </Row>
       </Container>
     );
   }

@@ -3,7 +3,7 @@ import API from "../utils/API";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import { Col, Row, Container } from "../components/Grid";
 import { Link } from "react-router-dom";
-import Nav from "../components/Nav";
+import Nav from "../components/NavEdit";
 
 class EditPage extends Component {
   state = {

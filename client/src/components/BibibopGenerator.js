@@ -21,7 +21,7 @@ const bibiMenu = {
     { spicySriracha: 25 },
     { sesameGinger: 100 }
   ],
-  sides: [{ kimchi: 30 }, { misoSoup: 35 }]
+  sides: [{ kimchi: 30 }, { misoSoup: 35 }] //perhaps add salad here
 };
 
 var order = [];
@@ -71,5 +71,14 @@ addHotTopping();
 addColdTopping();
 addSauce();
 addSide();
+
+//allowance
+//1 base
+//1 or 2 proteins
+//1 2 or 3 hot toppings
+//1-9 cold toppings
+//1-2 sauces
+//1-10 sides
+
 console.log(order);
 console.log(assessMeal());

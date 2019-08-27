@@ -7,6 +7,8 @@ import { List, ListItem } from "../components/List";
 import { Link } from "react-router-dom";
 import MealButton from "../components/MealButton";
 import { addBase } from "../components/BibibopGenerator";
+import { generateMeal } from "../components/BibibopGenerator";
+// import "./style.css";
 
 class HomePage extends Component {
   state = {
@@ -32,9 +34,11 @@ class HomePage extends Component {
       "sriracha:20",
       "carrots:15"
     ],
+    order3: [],
     test: "testing",
     listItems: [],
-    listItems2: []
+    listItems2: [],
+    listItems3: []
   };
 
   loadUser = id => {
@@ -61,6 +65,9 @@ class HomePage extends Component {
     this.state.listItems2 = this.state.order2.map(ingredient => (
       <li>{ingredient}</li>
     ));
+  };
+  handleSubmit3 = event => {
+    this.state.order3 = generateMeal;
   };
 
   render() {

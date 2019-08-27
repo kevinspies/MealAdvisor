@@ -67,12 +67,19 @@ function assessMeal() {
   return currentCalories;
 }
 
-addBase();
-addProtein();
-addHotTopping();
-addColdTopping();
-addSauce();
-addSide();
+export function generateMeal() {
+  addBase();
+  addProtein();
+  addHotTopping();
+  addHotTopping();
+  addColdTopping();
+  addColdTopping();
+  addColdTopping();
+  addSauce();
+  addSide();
+  addSide();
+  return order;
+}
 
 //allowance
 //1 base

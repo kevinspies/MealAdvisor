@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import EditPage from "./pages/EditPage";
 import AboutPage from "./pages/AboutPage";
+import FuturePage from "./pages/FuturePage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/users/" component={HomePage} />
           <Route exact path="/edit/" component={EditPage} />
           <Route exact path="/about/" component={AboutPage} />
+          <Route exact path="/future/" component={FuturePage} />
         </Switch>
       </div>
     </Router>

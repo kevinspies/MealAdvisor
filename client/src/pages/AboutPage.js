@@ -15,9 +15,10 @@ function About() {
           <br></br> <br></br>It then allows you to roll new meals that adhere to
           that calorie requirement, a brunch and a dinner, each will be about
           half your daily need. You'll get new meals each time, so no boring
-          repetition here.<br></br> <br></br>-It will also let you confirm that
-          a meal is completed, and you'll then be told by when you should finish
-          your next meal to keep on a certain diet plan.
+          repetition here (such a bright future ahead!)<br></br> <br></br>-It
+          will also let you confirm that a meal is completed, and you'll then be
+          told by when you should finish your next meal to keep on a certain
+          diet plan.
         </h3>
       </Container>
     </div>

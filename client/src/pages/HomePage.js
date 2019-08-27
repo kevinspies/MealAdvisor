@@ -5,10 +5,24 @@ import NavTwo from "../components/NavTwo";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import { List, ListItem } from "../components/List";
 import { Link } from "react-router-dom";
+import MealButton from "../components/MealButton";
+import { addBase } from "../components/BibibopGenerator";
 
 class HomePage extends Component {
   state = {
-    remainingCalories: 1900
+    calories: "",
+    order: [
+      "rice",
+      "spicy chicken",
+      "bean sprouts",
+      "cabbage",
+      "daikon",
+      "romaine lettuce",
+      "kale",
+      "sriracha"
+    ],
+    test: "testing",
+    listItems: []
   };
 
   loadUser = id => {
@@ -16,12 +30,15 @@ class HomePage extends Component {
     //on page load
   };
 
-  //takes in the remaining number of calories needed for that day
-  generateBibibopMeal = function(calories) {
-    //i want this to return a json object representing one potential meal off the menu
-    //i can just define the bibi menu right here to start out
-    //rought plan, select one base, see where i'm at, one protein, see where i'm at, one topping, see where I'm at, (check) one dressing, check, then
-    //one more topping, check, one more topping, check, and then start randomizing betwwen more toppings and sides, something like this
+  handleSubmit = event => {
+    console.log(event);
+    console.log(addBase());
+    // this.setState({ test: "hello", order: addBase() });
+    this.setState({ test: "hello" });
+
+    this.state.listItems = this.state.order.map(ingredient => (
+      <li>{ingredient}</li>
+    ));
   };
 
   render() {
@@ -34,9 +51,24 @@ class HomePage extends Component {
         </Row>
         <Row>
           <Col size="md-6 md-offset-1">
-            Your Brunch:{this.generateBibibopMeal}
+            Generate Brunch
+            {/* <MealButton onClick={this.handleSubmit} /> */}
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={this.handleSubmit}
+            >
+              Primary
+            </button>
           </Col>
           <Col size="md-6 md-offset-1">Your Dinner:</Col>
+        </Row>
+        <Row>
+          {/* <Col size="md-6">{this.state.test}</Col> */}
+          <Col size="md-6">
+            <ul>{this.state.listItems}</ul>
+          </Col>
+          <Col size="md-6">meal 2</Col>
         </Row>
       </Container>
     );

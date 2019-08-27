@@ -47,16 +47,7 @@ class LoginPage extends Component {
     return (
       <Container fluid>
         <Nav />
-        {/* <form>
-          <label>
-            Username:
-            <input type="text" name="name" />
-          </label>
 
-          <label>
-            Password:
-            <input type="text" name="name" />
-          </label> */}
         <Row className="myForm">
           <Col size="md-6" className="myForm">
             <Input

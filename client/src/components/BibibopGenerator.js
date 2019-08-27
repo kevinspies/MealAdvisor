@@ -27,9 +27,11 @@ const bibiMenu = {
 var order = [];
 var currentCalories = 0;
 
-function addBase() {
+export function addBase() {
   order.push(bibiMenu.bases[Math.floor(Math.random() * bibiMenu.bases.length)]);
+  return order;
 }
+
 function addProtein() {
   order.push(
     bibiMenu.proteins[Math.floor(Math.random() * bibiMenu.proteins.length)]

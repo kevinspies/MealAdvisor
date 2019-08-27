@@ -12,17 +12,29 @@ class HomePage extends Component {
   state = {
     calories: "",
     order: [
-      "rice",
-      "spicy chicken",
-      "bean sprouts",
-      "cabbage",
-      "daikon",
-      "romaine lettuce",
-      "kale",
-      "sriracha"
+      "rice:320",
+      "spicy chicken:330",
+      "bean sprouts:140",
+      "cabbage:50",
+      "daikon:35",
+      "romaine lettuce:10",
+      "kale:25",
+      "sriracha:20"
+    ],
+    order2: [
+      "noodles:300",
+      "tofu:200",
+      "bean sprouts:140",
+      "potatoes:60",
+      "daikon:35",
+      "cheese:60",
+      "kale:25",
+      "sriracha:20",
+      "carrots:15"
     ],
     test: "testing",
-    listItems: []
+    listItems: [],
+    listItems2: []
   };
 
   loadUser = id => {
@@ -40,6 +52,16 @@ class HomePage extends Component {
       <li>{ingredient}</li>
     ));
   };
+  handleSubmit2 = event => {
+    console.log(event);
+    console.log(addBase());
+    // this.setState({ test: "hello", order: addBase() });
+    this.setState({ test: "hello" });
+
+    this.state.listItems2 = this.state.order2.map(ingredient => (
+      <li>{ingredient}</li>
+    ));
+  };
 
   render() {
     return (
@@ -47,28 +69,43 @@ class HomePage extends Component {
       <Container fluid>
         <NavTwo />
         <Row>
-          <Jumbotron>You Got This!</Jumbotron>
+          {/* <Col> */}
+          <Jumbotron>
+            "Persistance persistance persistance. YOUR DAILY GOAL: 1900
+            calories"
+          </Jumbotron>
+          {/* </Col> */}
+          {/* <Col>Daily Goal: 1900 calories</Col> */}
         </Row>
         <Row>
           <Col size="md-6 md-offset-1">
-            Generate Brunch
+            {/* Generate Brunch */}
             {/* <MealButton onClick={this.handleSubmit} /> */}
             <button
               type="button"
               className="btn btn-primary"
               onClick={this.handleSubmit}
             >
-              Primary
+              Generate Brunch
             </button>
           </Col>
-          <Col size="md-6 md-offset-1">Your Dinner:</Col>
+          {/* <Col size="md-6 md-offset-1">Your Dinner:</Col> */}
+          <Col size="md-6 md-offset-1">
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={this.handleSubmit2}
+            >
+              Generate Dinner
+            </button>
+          </Col>
         </Row>
         <Row>
           {/* <Col size="md-6">{this.state.test}</Col> */}
           <Col size="md-6">
             <ul>{this.state.listItems}</ul>
           </Col>
-          <Col size="md-6">meal 2</Col>
+          <Col size="md-6">{this.state.listItems2}</Col>
         </Row>
       </Container>
     );
